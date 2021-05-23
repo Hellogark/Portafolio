@@ -1,0 +1,44 @@
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+    background-color: hsl(264.29, 80.77%, 30.59%);
+    height:  90px;
+}
+
+.listaNav {
+    display: flex;
+    list-style-type: none;
+}
+.listaNav .listItem {
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 1s ease;
+    color: #ffffff;
+    padding: 1rem;
+}
+.listaNav li a {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+.listaNav li span {
+    width: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+.listaNav li:hover {
+    transform: translateY(-8px);
+}
+
+
