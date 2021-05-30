@@ -7,13 +7,15 @@
 .nav{
     display: flex;
     justify-content: center;
-    background-color: hsl(264.29, 80.77%, 30.59%);
+    background-color: #FFC371;
     height:  90px;
 }
 
 .listaNav {
     display: flex;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 .listaNav .listItem {
     margin: auto;
@@ -26,19 +28,85 @@
 }
 .listaNav li a {
     width: 100px;
+    height: 40px;
     display: flex;
-    flex-direction: column;
+    position: relative;
+    text-align: center;
     text-decoration: none;
     color: inherit;
-}
-.listaNav li span {
-    width: 100px;
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
+    justify-content: center;
+    align-items: center;
 }
 .listaNav li:hover {
     transform: translateY(-8px);
 }
 
+.bg__nav__home{
+    background:  #FFC371;  /* fallback for old browsers */
+    transition: background 0.5s ;
+}
+.bg__nav__home .listaNav .listItem{
+    color: black;
+}
+.bg__nav__about{
+    background: #FF5F6D;  /* fallback for old browsers */
+    transition: background 0.5s ;
+}
+.bg__nav__projects{
+    background: #C06C84;  /* fallback for old browsers */
+    transition: background 0.5s ;
+}
+.bg__nav__contact{
+    background: #344E64;  /* fallback for old browsers */
+    transition: background 0.5s ;
+}
 
+.active::after, .active::before {
+    content:"";
+    display: inline;
+    position: absolute;
+    top: 35px;
+}
+.active::after{
+    width: 40%;
+    right: 0;
+    border-bottom: 2.3px white solid;
+    animation-duration: 1s;
+    animation-name: moveLeftLine;
+    animation-iteration-count: 1;
+    
+}
+
+.active::before{
+    width: 40%;
+    left: 0;
+    border-bottom: 2.3px white solid;
+    animation-duration: 1s;
+    animation-name: moveRightLine;
+    animation-iteration-count: 1;
+}
+        
+        
+@keyframes moveRightLine {
+    from {
+        display: none;
+        transform: translateX(-50px);
+    }
+    to {
+        transform:translateX(0px);
+    }
+}
+@keyframes moveLeftLine {
+    from {
+        display: none;
+        transform: translateX(50px);
+    }
+    to {
+        transform:translateX(0px);
+    }
+}
+/*
+Before
+left: 53px;
+top: 23px;
+*/

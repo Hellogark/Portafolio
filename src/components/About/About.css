@@ -1,0 +1,15 @@
+.about-container{
+    background: #C06C84;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FF5F6D, #C06C84);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FF5F6D, #C06C84); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+    height:100vh;
+    width:100%;
+    padding-top: 9rem;
+}
+
+.about-section{
+    height:100%;
+    width: 100%;
+}
