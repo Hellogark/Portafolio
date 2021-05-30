@@ -9,7 +9,6 @@ import generarStore from './redux/store';
 
 import {Provider} from 'react-redux';
 function App() {
-  const scroll = null;
   const store = generarStore();
   useEffect(() => {
  

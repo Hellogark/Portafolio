@@ -1,7 +1,7 @@
 import React, { useEffect} from 'react'
 import './Navbar.css';
 import { useTranslation } from 'react-i18next'
-import  { Link, animateScroll as scroll } from "react-scroll";
+import  { Link } from "react-scroll";
 import {useDispatch, useSelector} from 'react-redux'
 import { changeClass } from '../../redux/colorDuck';
 const Navbar = () => {
