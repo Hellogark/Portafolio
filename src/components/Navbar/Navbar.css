@@ -1,3 +1,10 @@
+:root{
+    --display-stuff: flex;
+    --display-nav: none;
+}
+
+
+
 .header{
     position: fixed;
     width: 100%;
@@ -5,14 +12,15 @@
 
 
 .nav{
-    display: flex;
+    display: var(--display-stuff);
     justify-content: center;
     background-color: #FFC371;
     height:  90px;
+    align-items: center;
 }
 
 .listaNav {
-    display: flex;
+    display: var(--display-stuff);
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -29,7 +37,7 @@
 .listaNav li a {
     width: 100px;
     height: 40px;
-    display: flex;
+    display: var(--display-stuff);
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -85,6 +93,16 @@
     animation-name: moveRightLine;
     animation-iteration-count: 1;
 }
+
+.ham-container{
+    display: none;
+    cursor: pointer;
+}
+
+.ham-active{
+    position: absolute;
+    display: flex;
+}
         
         
 @keyframes moveRightLine {
@@ -105,8 +123,143 @@
         transform:translateX(0px);
     }
 }
+
+ @keyframes closeMenu {
+    from {
+        transform: translateY(0);
+        position: absolute;
+        top: 6em;
+    }
+    to {
+        transform: translateY(-150%);
+        position: absolute;
+    }
+} 
+@keyframes openMenu {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes top-line{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(22px) rotate(-45deg);
+    }
+}
+@keyframes bottom-line{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(45deg);
+    }
+}
+
+@keyframes middle-line{
+    50%, 100%{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .listaNav{
+        display: var(--display-nav);
+        top: 23vh;
+        position: relative;
+        width: 70vw;
+        padding: 2em;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .closedNav{
+        animation-duration: 0.5s;
+        animation-name: closeMenu;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        /*display: none;*/
+    }
+
+    .openNav{
+        animation-duration: 0.5s;
+        animation-name: openMenu;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        display: flex;
+    }
+    .ham-container{
+        width: 35px;
+        height: 35px;
+        display: block;
+        z-index: 30;
+    }
+
+    .ham-line{
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        display: block;
+        margin: 5px auto;
+    }
+    .ham-active .ham-line:nth-child(1){
+        animation-duration: 1s;
+        animation-name: top-line;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .ham-active .ham-line:nth-child(2){
+        animation-duration: 1s;
+        animation-name: middle-line;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .ham-active .ham-line:nth-child(3){
+        animation-duration: 1s;
+        animation-name: bottom-line;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .ham-inactive .ham-line:nth-child(1){
+        animation-duration: 1s;
+        animation-name: top-line;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+    }
+    .ham-inactive .ham-line:nth-child(2){
+        animation-duration: 1s;
+        animation-name: middle-line;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+    }
+    .ham-inactive .ham-line:nth-child(3){
+        animation-duration: 1s;
+        animation-name: bottom-line;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+    }
+}
 /*
 Before
 left: 53px;
 top: 23px;
 */
+/*
+
+.listNav{
+    display: flex;
+    flex
+top: 23vh;
+position: relative;
+background-color: #ced5e1;
+width: 70vw;
+height: 100%;
+padding: 2em;
+position: relative;
+flex-direction: column;
+justify-content: space-between;
+}
+**/
