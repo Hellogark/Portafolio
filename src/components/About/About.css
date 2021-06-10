@@ -2,14 +2,110 @@
     background: #C06C84;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #FF5F6D, #C06C84);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #FF5F6D, #C06C84); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    
-    height:100vh;
+    height:90vh;
     width:100%;
-    padding-top: 9rem;
+    padding-top: 6rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .about-section{
-    height:100%;
-    width: 100%;
+    width: 80vw;
+    display: flex;
+}
+
+.img-container{
+    width:40%;
+    align-self: flex-end;
+
+}
+.text-container{
+    width: 60%;
+    align-self: center;
+}
+.profilePic {
+    background-color: rgba(255, 255, 255, 0.542);
+}
+.info__row{
+    display: flex;
+    flex-direction: column;
+}
+.paragraph__1, .stack__container{
+    height:50%;
+}
+/*Grid*/
+.grid__container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+.grid-item img{
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 1024px) {
+    /* Styles */
+    .about-section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+        margin-bottom: 40px;     
+    }
+    .img-container, .text-container, .about-section{
+        width: 100%;
+    }
+    .paragraph__1{
+        padding: 0 20px;
+    }
+    .about__me__container{
+        text-align: center;
+    }
+    .about-container{
+        height: auto;
+
+    }
+    .grid__container{
+        grid-template-columns: repeat(auto-fill,100px);
+        grid-template-rows: 100px 100px;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .stack__container{
+        padding: 0 20px;
+    }
+    .profilePic{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .img-container{
+        text-align: center;
+        padding-top: 3em;
+    }
+    .div__grid__container{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-item{
+        text-align: center;
+    }
+}
+    
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+.grid__container{
+    column-gap: 50px;
+    grid-template-rows: 100px;
+}
+
 }

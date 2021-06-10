@@ -27,14 +27,12 @@ const Navbar = () => {
         }
     }, [navColors])
 
-    useEffect(() => {
-       
-    },[])
     const selectLanguageHandler = (language) => {
             i18n.changeLanguage(language);
     } 
     const scrollSection = ( bgClass, dispatch) => {
-        dispatch(changeClass(bgClass))
+        dispatch(changeClass(bgClass));
+
     }
     
     const changeNavbarState = () => {
@@ -48,21 +46,25 @@ const Navbar = () => {
             setResponsiveNavState(true);
             ham.style.pointerEvents = "auto";
         } else {
-            ham.classList.toggle("ham-active");
-            navList.classList.add("closedNav");
-            navList.classList.remove("openNav");
-            ham.classList.add("ham-inactive");
-            ham.classList.remove("ham-active");
-            setTimeout(() => {
-                document.documentElement.style.setProperty('--display-nav', 'none');
-                ham.classList.remove("ham-inactive");
-                ham.classList.remove("ham-active");
-                setResponsiveNavState(false);
-                ham.style.pointerEvents = "auto";
-            }, 700);
-
-
+           closeNav();
         }
+    }
+
+    const closeNav = () => {
+        let ham = document.getElementById("ham");
+        let navList = document.getElementById("listaNav");
+        ham.classList.toggle("ham-active");
+        navList.classList.add("closedNav");
+        navList.classList.remove("openNav");
+        ham.classList.add("ham-inactive");
+        ham.classList.remove("ham-active");
+        setTimeout(() => {
+            document.documentElement.style.setProperty('--display-nav', 'none');
+            ham.classList.remove("ham-inactive");
+            ham.classList.remove("ham-active");
+            setResponsiveNavState(false);
+            ham.style.pointerEvents = "auto";
+        }, 700);
     }
 
     return (
@@ -71,7 +73,7 @@ const Navbar = () => {
                 <ul className="listaNav" id="listaNav">
                     <li className="listItem" >
                         <Link
-                            onClick={() =>  scrollSection( 'bg__nav__home', dispatch )}
+                            onClick={() =>  {scrollSection( 'bg__nav__home', dispatch );closeNav();} }
                             onSetActive={() => scrollSection('bg__nav__home', dispatch )}
                             offset={-50}
                             to="home"
@@ -82,7 +84,7 @@ const Navbar = () => {
 
                     <li className="listItem"  >
                         <Link
-                        onClick={() =>  scrollSection( 'bg__nav__about', dispatch )}
+                        onClick={() =>  {scrollSection( 'bg__nav__about', dispatch );closeNav();}} 
                         onSetActive={() => scrollSection('bg__nav__about', dispatch )}
                         to="about"
                         spy={true}
@@ -92,7 +94,7 @@ const Navbar = () => {
 
                     <li className="listItem"  >
                         <Link
-                        onClick={() => scrollSection( 'bg__nav__projects', dispatch )}
+                        onClick={() => {scrollSection( 'bg__nav__projects', dispatch );closeNav();} }
                         onSetActive={() => scrollSection('bg__nav__projects', dispatch )}
                         to="projects"
                         spy={true}
@@ -103,7 +105,7 @@ const Navbar = () => {
 
                     <li className="listItem"   >
                     <Link
-                        onClick={() => scrollSection('bg__nav__contact', dispatch )}
+                        onClick={() => {scrollSection('bg__nav__contact', dispatch );closeNav();} }
                         onSetActive={() => scrollSection('bg__nav__contact', dispatch )}
                         to="contact"
                         spy={true}

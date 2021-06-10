@@ -6,13 +6,9 @@ import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import generarStore from './redux/store';
-
 import {Provider} from 'react-redux';
 function App() {
   const store = generarStore();
-  useEffect(() => {
- 
-  }, [])
   return (
     <Provider store={store}>
       <div className="container" id="wrapper" >

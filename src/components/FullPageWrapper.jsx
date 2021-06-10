@@ -2,6 +2,9 @@
 import React from 'react'
 import ReactFullpage from '@fullpage/react-fullpage';
 import Home from './Home/Home';
+import About from './About/About';
+import Projects from './Projects/Projects';
+import Contact from './Contact/Contact';
 const tags = ['home', 'projects', 'about', 'contact'];
 const FullpageWrapper = ({props}) => (
 
@@ -9,8 +12,6 @@ const FullpageWrapper = ({props}) => (
       anchors={tags}
       navigation
       navigationTooltips={tags}
-    licenseKey= 'OPEN-SOURCE-GPLV3-LICENSE'
-
       onLeave={(origin, destination, direction) => {
         console.log("onLeave event", { origin, destination, direction });
       }}
@@ -18,7 +19,10 @@ const FullpageWrapper = ({props}) => (
         // eslint-disable-line no-console  
         return (
             <ReactFullpage.Wrapper>
-                <Home/>
+               <Home  className="section-area"id="home"/>
+                <About className="section-area" id="about"/>
+                <Projects className="section-area" id="projects"/>
+                <Contact className="section-area" id="contact"/>
             </ReactFullpage.Wrapper>
         );
       }}

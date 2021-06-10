@@ -3,5 +3,25 @@
     "home": "Home",
     "about": "About Me",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "home.h2": "Eduardo Moreno",
+    "home.h3": "Full Stack Developer",
+    "about.h1" : "About Me",
+    "about.h3.1" : " Hi, I’m a Full Stack developer with Bachelor's degree in Informatics Engineer from Mexico who is growing in the tech world.",
+    "about.h3.2" : "Fan of nothing but seeker of everything I could like.",
+    "about.h3.3" : "I enjoy playing boardgames with Friends and by myself and ride my bike and go everywhere I need to go.",
+    "about.h3.4" : " I’m always looking to improve my skills in project structure, best practices, design patterns and everything that will help me to be a better developer.",
+    "about.h1.mystack" : "My Stack",
+    "about.h1.learning" : "In progress",
+    "projects.title" : "Projects",
+    "projects.subtitle" : "These are some of the projects that i have worked on",
+    "projects.monetizat" : "Projects",
+    "projects.sabysusy" : "Projects",
+    "projects.buscarancho" : "Projects",
+    "projects.overfly" : "Projects",
+    "projects.sunwire" : "Projects",
+    "projects.nieblas" : "Projects"
+
+    
     }
+

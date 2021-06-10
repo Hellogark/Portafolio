@@ -7,7 +7,8 @@
 
 .header{
     position: fixed;
-    width: 100%;
+    width: 100vw;
+    z-index: 3;
 }
 
 
@@ -169,6 +170,7 @@
         display: var(--display-nav);
         top: 23vh;
         position: relative;
+        margin-top: 120px;
         width: 70vw;
         padding: 2em;
         position: relative;
@@ -177,7 +179,7 @@
     }
 
     .closedNav{
-        animation-duration: 0.5s;
+        animation-duration: 0.8s;
         animation-name: closeMenu;
         animation-direction: normal;
         animation-fill-mode: forwards;
@@ -185,7 +187,7 @@
     }
 
     .openNav{
-        animation-duration: 0.5s;
+        animation-duration: 0.8s;
         animation-name: openMenu;
         animation-direction: normal;
         animation-fill-mode: forwards;
@@ -242,24 +244,3 @@
         animation-fill-mode: forwards;
     }
 }
-/*
-Before
-left: 53px;
-top: 23px;
-*/
-/*
-
-.listNav{
-    display: flex;
-    flex
-top: 23vh;
-position: relative;
-background-color: #ced5e1;
-width: 70vw;
-height: 100%;
-padding: 2em;
-position: relative;
-flex-direction: column;
-justify-content: space-between;
-}
-**/
