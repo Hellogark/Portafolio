@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useCallback} from 'react'
 import './Contact.css'
 import DownArrow from '../DownArrow/DownArrow';
 import { useTranslation } from 'react-i18next';
@@ -18,7 +18,7 @@ const downloadPdf = () =>{
     :
     saveAs("https://res.cloudinary.com/eduardocloud/image/upload/v1623808791/Media/Eduardo-Moreno-CV-EN.pdf", "Eduardo-Moreno-CV");
 }
-const initScroller = () => {
+const initScroller = useCallback(() => {
     const scroll = new ScrollWatcher();
     window.innerWidth <= 768 ?
     scroll
@@ -30,10 +30,10 @@ const initScroller = () => {
   .on("enter", function(evt) {
     scrollSection('bg__nav__contact', dispatch )
   });
-}
+});
 useEffect(() => {
     initScroller();
-}, [])
+}, [initScroller])
     return (
         <div className="contact-container" name="contact">
             <div>
