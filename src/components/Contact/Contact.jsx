@@ -9,10 +9,9 @@ import ScrollWatcher from 'scroll-watcher'
 const Contact = () => {
 const { t, i18n } = useTranslation();    
 const dispatch = useDispatch();
-const scroll = new ScrollWatcher();
 const scrollSection = ( bgClass, dispatch) => {
     dispatch(changeClass(bgClass));
-
+    
 }
 const downloadPdf = () =>{
     i18n.language === 'es' ? 
@@ -21,6 +20,7 @@ const downloadPdf = () =>{
     saveAs("https://res.cloudinary.com/eduardocloud/image/upload/v1623808791/Media/Eduardo-Moreno-CV-EN.pdf", "Eduardo-Moreno-CV");
 }
 useEffect(() => {
+    const scroll = new ScrollWatcher();
     window.innerWidth <= 768 ?
     scroll
   .watch(".contact-section")
@@ -31,7 +31,7 @@ useEffect(() => {
   .on("enter", function(evt) {
     scrollSection('bg__nav__contact', dispatch )
   });
-}, [])
+}, [dispatch]);
     return (
         <div className="contact-container" name="contact">
             <div>
