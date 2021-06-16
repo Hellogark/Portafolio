@@ -31,16 +31,16 @@ return (
                         <h1> {t("about.h1.mystack")} </h1>
                         <div className="grid__container">
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033257/Angular_logo.svg.png" alt="Angular"  />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033257/IconsStack/Angular_logo.svg.png" alt="Angular"  />
                             </div>
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/ionic.png" alt="Ionic"  />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/IconsStack/ionic.png" alt="Ionic"  />
                             </div>
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/sails.png" alt="sails js"  />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/IconsStack/sails.png" alt="sails js"  />
                             </div>
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033258/mysql.png" alt="mysql" />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033258/IconsStack/mysql.png" alt="mysql" />
                             </div>
                         </div>
                     </div>
@@ -50,16 +50,16 @@ return (
 
                         <div className="grid__container">
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623043098/react.png" alt="react" />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623043098/IconsStack/react.png" alt="react" />
                             </div>
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623034046/c.png" alt="C#"  />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623034046/IconsStack/c.png" alt="C#"  />
                             </div>
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/netcore.svg.png" alt="NetCore"  />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/IconsStack/netcore.svg.png" alt="NetCore"  />
                             </div>
                             <div className="grid-item">
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033257/sqlServer.png" alt="sqlServer"  />
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033257/IconsStack/sqlServer.png" alt="sqlServer"  />
                             </div>
                         </div>
                     </div>
@@ -75,9 +75,3 @@ return (
 
 export default About
 
-/**    //https://www.monetiza.mx
-    //https://susyarambula.com
-    //https://buscarancho.com
-    //https://overflysports.com
-    //https://sunwire.com.mx
-    //https://inmobiliarianieblas.com */

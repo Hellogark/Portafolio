@@ -19,6 +19,7 @@
 .img-container{
     width:40%;
     align-self: flex-end;
+    
 
 }
 .text-container{
@@ -46,6 +47,7 @@
 .grid-item img{
     width: 100px;
     height: 100px;
+    background-color: rgb(220, 209, 209);
 }
 
 

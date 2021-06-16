@@ -1,17 +1,83 @@
-.contact-container{
-    background: #344E64;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #070A0D, #344E64);  /* Chrome 10-25, Safari 5.1-6 */
-    background:linear-gradient(to top, #070A0D, #344E64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height:100vh;
-    width:100%;
+.contact-container {
+    background: #344E64;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #070A0D, #344E64);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #070A0D, #344E64);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 87vh;
+    width: 100%;
     padding-top: 9rem;
     scroll-snap-type: y mandatory;
-    
+
 }
 
-.contact-section{
+.contact-section {
     scroll-snap-align: start;
-    height:100%;
+    height: 500px;
     width: 100%;
     color: rgb(220, 209, 209);
+}
+
+.contact-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(3rem, -4.5789rem + 15.7895vw, 3rem);
+
+}
+
+
+.media-container {
+    display: flex;
+    justify-content: space-around;
+    height: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-media {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.img-media img {
+    width: 200px;
+    height: 200px;
+}
+
+.img-media:first-child {
+    background-color: rgb(220, 209, 209);
+    border-radius: 10%;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+    .contact-container {
+        height: 55vh;
+    }
+
+    .media-container {
+        position: relative;
+        padding-bottom: 70px;
+    }
+
+    .contact-section {
+        height: auto;
+    }
+
+    .img-media {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-media:first-child {
+
+        border-radius: 10%;
+
+    }
+
+    .img-media img {
+        width: 100%;
+        height: 100px;
+    }
 }

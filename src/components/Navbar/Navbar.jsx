@@ -11,6 +11,7 @@ const Navbar = () => {
     const [responsiveNavState, setResponsiveNavState] = useState(false);
 
 
+
     useEffect(() => {
         const prev = navColors.state && navColors.state.bgClass  ? navColors.state.bgClass : null;
         const next = navColors.bgClass;
@@ -34,7 +35,7 @@ const Navbar = () => {
         dispatch(changeClass(bgClass));
 
     }
-    
+
     const changeNavbarState = () => {
         let ham = document.getElementById("ham");
         ham.style.pointerEvents = "none";

@@ -1,18 +1,57 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Contact.css'
-
+import DownArrow from '../DownArrow/DownArrow';
+import { useTranslation } from 'react-i18next';
+import { saveAs } from 'file-saver';
+import {useDispatch, useSelector} from 'react-redux'
+import { changeClass } from '../../redux/colorDuck';
+import ScrollWatcher from 'scroll-watcher'
 const Contact = () => {
+const { t, i18n } = useTranslation();    
+const dispatch = useDispatch();
+const scroll = new ScrollWatcher();
+const scrollSection = ( bgClass, dispatch) => {
+    dispatch(changeClass(bgClass));
+
+}
+const downloadPdf = () =>{
+    i18n.language == 'es' ? 
+    saveAs("https://res.cloudinary.com/eduardocloud/image/upload/v1623808793/Media/EDUARDO-MORENO-CV-ES.pdf", "CV-Eduardo-Moreno")
+    :
+    saveAs("https://res.cloudinary.com/eduardocloud/image/upload/v1623808791/Media/Eduardo-Moreno-CV-EN.pdf", "Eduardo-Moreno-CV");
+}
+useEffect(() => {
+    scroll
+  .watch(".contact-section")
+  .on("enter:full", function(evt) {
+    scrollSection('bg__nav__contact', dispatch )
+  })
+}, [])
     return (
         <div className="contact-container" name="contact">
-
+            <div>
+                <h1 className="contact-title"> {t("contact.h1")} </h1>
+            </div>
         <section className="contact-section">
-        
-        Prop 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium magnam molestiae cumque, illo saepe voluptatem fugiat pariatur cupiditate, aperiam deleniti voluptates tenetur quaerat, impedit sit fugit atque animi aspernatur voluptate.
-        Culpa eum voluptatum totam perspiciatis quasi fugit, consequatur voluptas voluptatem laudantium doloribus expedita repudiandae deleniti consectetur pariatur cum doloremque id dolorum dolor reiciendis ipsa odio iste inventore. Possimus, quas voluptates.
-        Alias eligendi aperiam porro minus, cupiditate amet ex voluptas numquam repudiandae aliquam illo sunt quod commodi voluptatum provident earum odit officia voluptates labore rem natus praesentium sit. Ipsa, natus cum.
-        Atque rerum aliquam saepe quidem ea quisquam recusandae libero voluptatem fugiat nulla, temporibus non sit impedit nam enim alias corporis quibusdam eius odio! Voluptatum consequatur dolorem ipsam. Adipisci, magni quia.
-        Porro debitis doloremque error numquam unde beatae fugiat corrupti praesentium ducimus veritatis, quis autem quasi facere laboriosam! Minus ab excepturi ex iste. Atque non porro consequuntur saepe nam dolorum dolor.
+        <div className="media-container">
+            <div className="img-media">
+                <a href="https://www.linkedin.com/in/edmolo/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://res.cloudinary.com/eduardocloud/image/upload/v1623808654/Media/linkdin-icon.svg" alt="Linkedin" title="linkedin" />
+                </a>
+            </div>
+            <div className="img-media">
+                <a href="mailto:eledmolo@gmail.com">
+                    <img src="https://res.cloudinary.com/eduardocloud/image/upload/v1623808653/Media/mail-icon.svg" alt="" />
+                </a>
+            </div>
+            <div className="img-media" onClick={downloadPdf}>
+                <img  src="https://res.cloudinary.com/eduardocloud/image/upload/v1623808655/Media/cv-icon.svg" alt={t('contact.alts.cv')} title={t('contact.alts.cv')} />
+            </div>
+        </div> 
+       
+        <DownArrow start="toStart" container={"home"} offset={0} />
         </section>
+
     </div>
     )
 }

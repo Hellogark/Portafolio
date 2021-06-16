@@ -138,5 +138,10 @@
         transition: none;
         transform: none;
     }
+    .home-container,
+    .home-section,
+    .cards-container{
+        height: auto;
+    }
 
 }

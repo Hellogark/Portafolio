@@ -2,5 +2,19 @@
     "home": "Inicio",
     "about": "Sobre mí",
     "projects": "Proyectos",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "home.h2": "Eduardo Moreno",
+    "home.h3": "Full Stack Developer",
+    "about.h1" : "Sobre Mí",
+    "about.h3.1" : " Hola, soy un desarrollador mexicano Full Stack con título en Ingeniería Informática que está creciendo en el mundo del desarrollo web",
+    "about.h3.2" : "Fan de nada pero buscador de todo lo que me pueda gustar.",
+    "about.h3.3" : "Disfruto jugar juegos de mesa con amigos y conmigo mismo, andar en bicicleta e ir a donde sea que necesite ir.",
+    "about.h3.4" : " Siempre estoy buscando mejorar mis hablididades en arquitectura de proyectos, patrones de diseño, y todo lo que me ayude a ser un mejor desarrollador.",
+    "about.h1.mystack" : "Mi stack",
+    "about.h1.learning" : "En progreso",
+    "projects.title" : "Proyectos",
+    "projects.subtitle" : "Estos son algunos de los proyectos en los que he trabajado",
+    "contact.h1" : "Contacto",
+    "contact.email" : "Contact me",
+    "contact.alts.cv" : "Download CV"
 }
