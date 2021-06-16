@@ -18,7 +18,7 @@ const downloadPdf = () =>{
     :
     saveAs("https://res.cloudinary.com/eduardocloud/image/upload/v1623808791/Media/Eduardo-Moreno-CV-EN.pdf", "Eduardo-Moreno-CV");
 }
-useEffect(() => {
+const initScroller = () => {
     const scroll = new ScrollWatcher();
     window.innerWidth <= 768 ?
     scroll
@@ -30,6 +30,9 @@ useEffect(() => {
   .on("enter", function(evt) {
     scrollSection('bg__nav__contact', dispatch )
   });
+}
+useEffect(() => {
+    initScroller();
 }, [])
     return (
         <div className="contact-container" name="contact">
