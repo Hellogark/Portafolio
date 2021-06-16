@@ -29,8 +29,8 @@ const initScroller = useCallback(() => {
   .watch(".contact-section")
   .on("enter", function(evt) {
     scrollSection('bg__nav__contact', dispatch )
-  }, []);
-});
+  });
+}, []);
 useEffect(() => {
     initScroller();
 }, [initScroller])
