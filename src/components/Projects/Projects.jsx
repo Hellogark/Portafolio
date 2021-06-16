@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 
 const Projects = () => {
-const { t, i18n } = useTranslation();
+const { t } = useTranslation();
 
     return (
         <div className="projects-container" name="projects">
@@ -45,6 +45,13 @@ const { t, i18n } = useTranslation();
                 <a href="https://susyarambula.com" target="_blank" rel="noopener noreferrer">
                 <div className="front">
                     <img src="https://res.cloudinary.com/eduardocloud/image/upload/v1623798313/Projects/sabysusy.svg" loading="lazy" alt="Susy Arámbula" title="Sa by SusyArámbula" />
+                </div>
+                </a>
+            </div>
+             <div className="img__container">
+                <a href="https://andromedajoyeria.mx/inicio" target="_blank" rel="noopener noreferrer">
+                <div className="front">
+                    <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623823218/Projects/andromeda.svg" alt="Andromeda joyería" />  
                 </div>
                 </a>
             </div>

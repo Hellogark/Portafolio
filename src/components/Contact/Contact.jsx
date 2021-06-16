@@ -3,7 +3,7 @@ import './Contact.css'
 import DownArrow from '../DownArrow/DownArrow';
 import { useTranslation } from 'react-i18next';
 import { saveAs } from 'file-saver';
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import { changeClass } from '../../redux/colorDuck';
 import ScrollWatcher from 'scroll-watcher'
 const Contact = () => {
@@ -15,17 +15,22 @@ const scrollSection = ( bgClass, dispatch) => {
 
 }
 const downloadPdf = () =>{
-    i18n.language == 'es' ? 
+    i18n.language === 'es' ? 
     saveAs("https://res.cloudinary.com/eduardocloud/image/upload/v1623808793/Media/EDUARDO-MORENO-CV-ES.pdf", "CV-Eduardo-Moreno")
     :
     saveAs("https://res.cloudinary.com/eduardocloud/image/upload/v1623808791/Media/Eduardo-Moreno-CV-EN.pdf", "Eduardo-Moreno-CV");
 }
 useEffect(() => {
+    window.innerWidth <= 768 ?
     scroll
   .watch(".contact-section")
   .on("enter:full", function(evt) {
     scrollSection('bg__nav__contact', dispatch )
-  })
+  }) :  scroll
+  .watch(".contact-section")
+  .on("enter", function(evt) {
+    scrollSection('bg__nav__contact', dispatch )
+  });
 }, [])
     return (
         <div className="contact-container" name="contact">
