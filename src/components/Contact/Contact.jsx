@@ -5,7 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { saveAs } from 'file-saver';
 import {useDispatch} from 'react-redux'
 import { changeClass } from '../../redux/colorDuck';
-import ScrollWatcher from 'scroll-watcher'
+import ScrollWatcher from 'scroll-watcher';
+
+
 const Contact = () => {
 const { t, i18n } = useTranslation();    
 const dispatch = useDispatch();
@@ -39,17 +41,26 @@ useEffect(() => {
             </div>
         <section className="contact-section">
         <div className="media-container">
-            <div className="img-media">
+            <div className="img-media"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
                 <a href="https://www.linkedin.com/in/edmolo/" target="_blank" rel="noopener noreferrer">
                     <img src="https://res.cloudinary.com/eduardocloud/image/upload/v1623808654/Media/linkdin-icon.svg" alt="Linkedin" title="linkedin" />
                 </a>
             </div>
-            <div className="img-media">
+            <div className="img-media"
+                data-aos="fade-up"
+                data-aos-delay="600"
+            >
                 <a href="mailto:eledmolo@gmail.com">
                     <img src="https://res.cloudinary.com/eduardocloud/image/upload/v1623808653/Media/mail-icon.svg" alt="" />
                 </a>
             </div>
-            <div className="img-media" onClick={downloadPdf}>
+            <div className="img-media" onClick={downloadPdf}
+                data-aos="fade-up"
+                data-aos-delay="900"
+            >
                 <img  src="https://res.cloudinary.com/eduardocloud/image/upload/v1623808655/Media/cv-icon.svg" alt={t('contact.alts.cv')} title={t('contact.alts.cv')} />
             </div>
         </div> 

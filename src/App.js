@@ -1,4 +1,4 @@
-
+import {useEffect} from 'react'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
@@ -7,7 +7,12 @@ import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import generarStore from './redux/store';
 import {Provider} from 'react-redux';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 function App() {
+useEffect(() => {
+  AOS.init();
+}, [])
   const store = generarStore();
   return (
     <Provider store={store}>
