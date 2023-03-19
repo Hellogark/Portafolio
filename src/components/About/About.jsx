@@ -37,32 +37,38 @@ return (
                         <div className="grid__container">
                             <div className="grid-item"
                                 data-aos="fade-down"
-                                data-aos-delay="200"
-                            >
+                                data-aos-delay="200">
                                 <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033257/IconsStack/Angular_logo.svg.png" alt="Angular"  />
                             </div>
                             <div className="grid-item"
                                 data-aos="fade-down"
-                                data-aos-delay="400"
-                            >
+                                data-aos-delay="400">
                                 <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/IconsStack/ionic.png" alt="Ionic"  />
                             </div>
                             <div className="grid-item"
                                 data-aos="fade-down"
-                                data-aos-delay="600"
-                            >
+                                data-aos-delay="600">
                                 <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033255/IconsStack/sails.png" alt="sails js"  />
                             </div>
                             <div className="grid-item"
                                 data-aos="fade-down"
-                                data-aos-delay="800"
-                            >
-                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033258/IconsStack/mysql.png" alt="mysql" />
+                                data-aos-delay="1200">
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033258/IconsStack/mysql.png" alt="spring" />
+                            </div>
+                            <div className="grid-item"
+                                data-aos="fade-down"
+                                data-aos-delay="800">
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1679256926/IconsStack/j66d15rlcoxkhayjfxo4.png" alt="mysql" />
+                            </div>
+                            <div className="grid-item"
+                                data-aos="fade-down"
+                                data-aos-delay="1000">
+                                <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1679256892/IconsStack/abxqsrywj1hrteuimbhy.png" alt="postgres" />
                             </div>
                         </div>
                     </div>
 
-                    <div>
+{/*                     <div>
                         <h1> {t("about.h1.learning")} </h1>
 
                         <div className="grid__container"
@@ -91,7 +97,7 @@ return (
                                 <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623033257/IconsStack/sqlServer.png" alt="sqlServer"  />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 
             </div>

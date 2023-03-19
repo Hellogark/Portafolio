@@ -60,29 +60,17 @@ const { t } = useTranslation();
                 </div>
                 </a>
             </div>
-             <div className="img__container"
-                data-aos="zoom-out"
-                data-aos-delay="1000"
-             >
-                <a href="https://andromedajoyeria.mx/inicio" target="_blank" rel="noopener noreferrer">
-                <div className="front">
-                    <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623823218/Projects/andromeda.svg" alt="Andromeda joyería" />  
-                </div>
-                </a>
-            </div>
             <div className="img__container"
-                data-aos="fade-left"
-                data-aos-delay="900"
-            >
+                data-aos="fade-right"
+                data-aos-delay="900">
                 <a href="https://inmobiliarianieblas.com" target="_blank" rel="noopener noreferrer">
                 <div className="front">
                     <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623798315/Projects/nieblas.svg" alt="inmobiliaria nieblas" />  
                 </div>
                 </a>
             </div>
-            <div className="img__container"
-               
-            >
+            <div className="img__container"data-aos="fade-left"
+                data-aos-delay="1200">
                 <a href="https://sunwire.com.mx" target="_blank" rel="noopener noreferrer">
                 <div className="front">
                         <img loading="lazy" src="https://res.cloudinary.com/eduardocloud/image/upload/v1623798314/Projects/sunwire.svg" alt="sunwire" />
